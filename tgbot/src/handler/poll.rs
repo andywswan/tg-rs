@@ -34,6 +34,8 @@ pub struct UpdatesStream {
 }
 
 fn make_request(api: &Api, options: &UpdatesStreamOptions) -> ApiFuture<Vec<Update>> {
+    let a = "abc";
+    error!("123 {}", a);
     api.execute(
         GetUpdates::default()
             .offset(options.offset + 1)
