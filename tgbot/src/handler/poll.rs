@@ -48,8 +48,8 @@ impl State {
     fn switch_to_idle(&mut self, err: Error) {
         error!(
             "An error has occurred while getting updates. Err: {}. Backtrace: {}",
-            format!("{:?}", err).replace('\n', " "),
-            format!("{:?}", err.backtrace()).replace('\n', " ")
+            format!("{:?}", err).replace('\n', "\r"),
+            format!("{:?}", err.backtrace()).replace('\n', "\r")
         );
         let error_timeout = err
             .downcast::<ResponseError>()
