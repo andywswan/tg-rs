@@ -35,9 +35,6 @@ pub struct UpdatesStream {
 
 fn make_request(api: &Api, options: &UpdatesStreamOptions) -> ApiFuture<Vec<Update>> {
 
-    let txt = (1..=500).map(|x| x.to_string()).collect::<String>();
-    error!("Log lenght test: {}", txt);
-
     api.execute(
         GetUpdates::default()
             .offset(options.offset + 1)
