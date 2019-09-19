@@ -16,7 +16,7 @@ use tokio_timer::sleep;
 
 const DEFAULT_LIMIT: Integer = 100;
 const DEFAULT_POLL_TIMEOUT: Duration = Duration::from_secs(10);
-const DEFAULT_ERROR_TIMEOUT: Duration = Duration::from_secs(5);
+const DEFAULT_ERROR_TIMEOUT: Duration = Duration::from_secs(1);
 
 enum State {
     BufferedResults(VecDeque<Update>),
